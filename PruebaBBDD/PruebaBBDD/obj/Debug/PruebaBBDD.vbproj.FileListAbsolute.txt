@@ -1,0 +1,53 @@
+C:\Users\tere\Desktop\VB.NET\PruebaBBDD\PruebaBBDD\bin\Debug\PruebaBBDD.exe.config
+C:\Users\tere\Desktop\VB.NET\PruebaBBDD\PruebaBBDD\bin\Debug\PruebaBBDD.exe
+C:\Users\tere\Desktop\VB.NET\PruebaBBDD\PruebaBBDD\bin\Debug\PruebaBBDD.pdb
+C:\Users\tere\Desktop\VB.NET\PruebaBBDD\PruebaBBDD\bin\Debug\PruebaBBDD.xml
+C:\Users\tere\Desktop\VB.NET\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.vbprojAssemblyReference.cache
+C:\Users\tere\Desktop\VB.NET\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.Resources.resources
+C:\Users\tere\Desktop\VB.NET\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.vbproj.GenerateResource.cache
+C:\Users\tere\Desktop\VB.NET\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.exe
+C:\Users\tere\Desktop\VB.NET\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.xml
+C:\Users\tere\Desktop\VB.NET\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.pdb
+C:\Users\tere\Desktop\VB.NET\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.FrmNaveBBDD.resources
+C:\Users\tere\Desktop\VB.NET\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.FrmInicio.resources
+C:\Users\tere\Desktop\VB.NET\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.FrmConsultas.resources
+C:\Users\tere\Desktop\EscritorioTereConfinamiento\VB.NET\PruebaBBDD\PruebaBBDD\bin\Debug\PruebaBBDD.exe.config
+C:\Users\tere\Desktop\EscritorioTereConfinamiento\VB.NET\PruebaBBDD\PruebaBBDD\bin\Debug\PruebaBBDD.exe
+C:\Users\tere\Desktop\EscritorioTereConfinamiento\VB.NET\PruebaBBDD\PruebaBBDD\bin\Debug\PruebaBBDD.pdb
+C:\Users\tere\Desktop\EscritorioTereConfinamiento\VB.NET\PruebaBBDD\PruebaBBDD\bin\Debug\PruebaBBDD.xml
+C:\Users\tere\Desktop\EscritorioTereConfinamiento\VB.NET\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.vbprojAssemblyReference.cache
+C:\Users\tere\Desktop\EscritorioTereConfinamiento\VB.NET\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.FrmInicio.resources
+C:\Users\tere\Desktop\EscritorioTereConfinamiento\VB.NET\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.FrmConsultas.resources
+C:\Users\tere\Desktop\EscritorioTereConfinamiento\VB.NET\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.FrmNaveBBDD.resources
+C:\Users\tere\Desktop\EscritorioTereConfinamiento\VB.NET\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.Resources.resources
+C:\Users\tere\Desktop\EscritorioTereConfinamiento\VB.NET\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.vbproj.GenerateResource.cache
+C:\Users\tere\Desktop\EscritorioTereConfinamiento\VB.NET\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.exe
+C:\Users\tere\Desktop\EscritorioTereConfinamiento\VB.NET\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.xml
+C:\Users\tere\Desktop\EscritorioTereConfinamiento\VB.NET\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.pdb
+C:\Users\tere\Desktop\PruebaBBDD\PruebaBBDD\bin\Debug\PruebaBBDD.exe.config
+C:\Users\tere\Desktop\PruebaBBDD\PruebaBBDD\bin\Debug\PruebaBBDD.exe
+C:\Users\tere\Desktop\PruebaBBDD\PruebaBBDD\bin\Debug\PruebaBBDD.pdb
+C:\Users\tere\Desktop\PruebaBBDD\PruebaBBDD\bin\Debug\PruebaBBDD.xml
+C:\Users\tere\Desktop\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.vbprojAssemblyReference.cache
+C:\Users\tere\Desktop\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.FrmInicio.resources
+C:\Users\tere\Desktop\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.FrmConsultas.resources
+C:\Users\tere\Desktop\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.FrmNaveBBDD.resources
+C:\Users\tere\Desktop\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.Resources.resources
+C:\Users\tere\Desktop\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.vbproj.GenerateResource.cache
+C:\Users\tere\Desktop\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.exe
+C:\Users\tere\Desktop\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.xml
+C:\Users\tere\Desktop\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.pdb
+C:\Visual Studio\PruebaBBDD\PruebaBBDD\bin\Debug\PruebaBBDD.exe.config
+C:\Visual Studio\PruebaBBDD\PruebaBBDD\bin\Debug\PruebaBBDD.exe
+C:\Visual Studio\PruebaBBDD\PruebaBBDD\bin\Debug\PruebaBBDD.pdb
+C:\Visual Studio\PruebaBBDD\PruebaBBDD\bin\Debug\PruebaBBDD.xml
+C:\Visual Studio\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.vbproj.AssemblyReference.cache
+C:\Visual Studio\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.FrmInicio.resources
+C:\Visual Studio\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.FrmConsultas.resources
+C:\Visual Studio\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.FrmNaveBBDD.resources
+C:\Visual Studio\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.Resources.resources
+C:\Visual Studio\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.vbproj.GenerateResource.cache
+C:\Visual Studio\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.vbproj.CoreCompileInputs.cache
+C:\Visual Studio\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.exe
+C:\Visual Studio\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.xml
+C:\Visual Studio\PruebaBBDD\PruebaBBDD\obj\Debug\PruebaBBDD.pdb
