@@ -1,0 +1,121 @@
+﻿<Window x:Class="AccDatos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AccDatos"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush>
+                <!-- Aitor Aqui va la foto -->
+            </ImageBrush>
+            <!--< AQUI VA LA IMAGEN >-->
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.3*"/>
+            <RowDefinition Height="3.2*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3.2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel x:Name="sp_LOGIN" Grid.Row="1" Grid.Column="1" Background="Beige" Visibility="Collapsed">
+            <StackPanel Margin="5" Height="100" Width="300">
+                <TextBlock Text="Usuario:" FontSize="30" Height="40" Width="144"/>
+                <TextBox x:Name="tb_usuario" FontSize="24" Margin="10" Height="40" Width="255" Background="AliceBlue"/>
+            </StackPanel>
+            <StackPanel Height="100" Width="300">
+                <TextBlock Text="Password:" FontSize="30" Height="40" Width="144"/>
+                <PasswordBox x:Name="pb_pass" FontSize="24" Margin="5" Height="40" Width="272" Background="AliceBlue"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center" Margin="5">
+                <Button x:Name="bt_login" Content="Log In" FontSize="30" Margin="7" Padding="1" Background="Coral" Foreground="Chartreuse"
+                        Click="bt_login_Click"/>
+                <Button x:Name="bt_registro"
+                        Content="Registrar" FontSize="30" Margin="5" Background="Aqua" Foreground="DarkMagenta"
+                        Click="bt_registro_Click"/>
+                <Button x:Name="bt_usuarioAnonimo" Content="Inicio Anonimo" FontSize="30" Margin="5" Background="Bisque" Foreground="Aqua" Click="bt_usuarioAnonimo_Click"/>
+
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel x:Name="sp_PreparacionSimulacion" Visibility="Collapsed" Grid.Row="0" Grid.Column="1" Margin="0,0,20,199" Grid.RowSpan="2">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Margin="10">
+                <StackPanel HorizontalAlignment="Center">
+                    <TextBlock Text="Filas:" FontSize="15"/>
+                    <TextBox x:Name="tb_filas" FontSize="15"/>
+                    <TextBlock Text="Columnas:" FontSize="15"/>
+                    <TextBox x:Name="tb_columnas" FontSize="15"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Width="80">
+                    <TextBlock Text="P:" FontSize="15"/>
+                    <TextBox x:Name="tb_P" FontSize="15"/>
+                    <TextBlock Text="Q:" FontSize="15"/>
+                    <TextBox x:Name="tb_Q" FontSize="15"/>
+                </StackPanel>
+
+            </StackPanel>
+            <Button Content="Iniciar Tablero"
+                    FontSize="20"
+                    Width="140"
+                    Height="30"
+                    Click="bt_iniciarTablero_Click"/>
+            <Button Content="Avanzar 1" HorizontalAlignment="Center"
+                    FontSize="20"
+                    Width="140"
+                    Height="30"
+                    Click="bt_Avanzar1_Click"/>
+            <Button Content="Cerrar Sesión" HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="btnCerrarSesion" Click="bt_Cerrar_Sesion" Width="90" Height="50" Margin="10" Background="Azure" RenderTransformOrigin="0.581,-1.417"/>
+            <!-- EL click no esta completado -->
+        </StackPanel>
+        <StackPanel x:Name="sp_Tablero" Grid.Row="1" Grid.Column="1">
+            <!-- Este Stack Panel no se si debe de estar -->
+        </StackPanel>
+        <!--<Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                <Image Grid.Row="0" Grid.Column="0" Source="./img/fertil.png"/>
+                <Image Grid.Row="0" Grid.Column="1" Source="./img/fertil.png"/>
+                <Image Grid.Row="1" Grid.Column="0" Source="./img/fertil.png"/>
+                <Image Grid.Row="1" Grid.Column="1" Source="./img/fertil.png"/>
+                
+            </Grid>-->
+        <StackPanel x:Name="sp_FormRegistro" Grid.Column="1" Visibility="Collapsed" Margin="0,92,0,2" Grid.RowSpan="2">
+            <StackPanel Height="293" Width="250" Margin="15">
+                <TextBlock Text="Nombre:" FontSize="14" Height="25" Width="75"/>
+                <TextBox x:Name="tb_nombre" FontSize="14" Height="18" Margin="2" Width="90" Background="AliceBlue"/>
+                <TextBlock Text="Apellido" FontSize="14" Height="25" Width="75"/>
+                <TextBox x:Name="tb_apellido" FontSize="14" Margin="2" Height="18" Width="90" Background="AliceBlue"/>
+                <TextBlock Text="Mail" FontSize="14" Height="25" Width="75"/>
+                <TextBox x:Name="tb_mail" FontSize="14" Margin="2" Height="18" Width="90" Background="AliceBlue"/>
+                <TextBlock Text="Usuario:" FontSize="14" Height="20" Width="70"/>
+                <TextBox x:Name="tb_usuario_Alta" FontSize="14" Margin="2" Height="18" Width="80" Background="AliceBlue" />
+                <TextBlock Text="Password:" FontSize="14" Height="20" Width="72"/>
+                <PasswordBox x:Name="pb_pass_Alta" FontSize="14" Margin="2" Height="18" Width="90" Background="AliceBlue"/>
+                <Button Content="Registrarse" x:Name="btnRegistrarse" Click="bt_Registrarse_Click" Height="24" Width="120" Margin="10"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel x:Name="sp_Configuracion" Grid.Row="0" Grid.Column="0" Visibility="Visible">
+            <Button Content="Configuracion" x:Name="bt_configuracion" Click="bt_configuracion_click" Margin="40" VerticalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel x:Name="sp_Musica" Grid.Row="0" Grid.Column="1" Visibility="Visible">
+            <Slider x:Name="sl_sonido" SmallChange="1" LargeChange="10" Value="5" Margin="50" Orientation="Horizontal" TickPlacement="BottomRight" TickFrequency="10" ValueChanged="sl_sonido_ValueChanged"/>
+        </StackPanel>
+                    
+    </Grid>
+</Window>
