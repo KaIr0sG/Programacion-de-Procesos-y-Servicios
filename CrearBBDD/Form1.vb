@@ -1,35 +1,60 @@
-﻿
-Imports System.Data.OleDb
+﻿Imports System.Data.OleDb
+Imports System.IO
 
 Public Class Form1
+    ' Creo las variables de conexion 
+    Dim oConexion As New OleDbConnection
+    Dim oDataAdapter As New OleDbDataAdapter("Select * from Notas", oConexion)
+    Dim oCommandBuilder = New OleDbCommandBuilder(oDataAdapter)
+    Dim oDataSet As New DataSet
 
+
+    ' Creo las variables que van a ser usadas en el la base de datos 
     Dim cat As New ADOX.Catalog
     Dim Cn As ADODB.Connection
+    Dim CarLeido As Integer
+    Dim Ciclo As String
+    Dim Curso As String
+    Dim Apelidos As String
+    Dim Nombre As String
+    Dim Nota1 As String
+    Dim Nota2 As String
+    Dim Nota3 As String
+    Dim Nota4 As String
+    Dim Nota5 As String
+    Dim Nota6 As String
+    Dim Nota7 As String
+    Dim Nota8 As String
+    Dim Nota9 As String
+    Dim Posi As Integer
     Private Sub BtnCrearBBDD_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCrearBBDD.Click
-
-
         Try
-            ' Generamos una nueva base de datos Access 2000, 2002 ó 2003
-            ' cat.Create("Provider = Microsoft.Jet.OLEDB.4.0;" & _
-            '            "Data Source = C:\Mis documentos\Nuevo1.mdb")
+            Dim direccion As String = ""
+            Dim oCarpetas As New SaveFileDialog
 
-            ' Generamos una nueva base de datos Access 2007-2013
-            cat.Create("Provider=Microsoft.Jet.OLEDB.4.0;" &
-                       "Data Source=C:\\BBDD_Vb\Nuevo.accdb")
+            oCarpetas.AddExtension = True
+            oCarpetas.DefaultExt = ".accdb"
+            oCarpetas.ShowDialog()
+            direccion = oCarpetas.FileName
+            MessageBox.Show(direccion)
 
-            ' Cerramos el objeto ADODB.Connection que ímplicitamente
-            ' se ha originado al crear el archivo de información.
+            ' Generamos una nueva base de datos Access 
+            cat.Create("Provider = Microsoft.Jet.OLEDB.4.0;" &
+                        "Data Source= " & direccion)
+
+            ' Cerramos el objeto ADODB.Connection que ímplicitamente se ha originado al crear el archivo de información.
             CType(cat.ActiveConnection, ADODB.Connection).Close()
 
-            MessageBox.Show("Se ha creado con éxito la base de datos.", _
-                            "Crear base de datos", _
-                            MessageBoxButtons.OK, _
+            ' Nos sale un Mensaje que nos confirma que se ha creado con exito la BBDD cpn su boton
+            MessageBox.Show("Se ha creado con éxito la base de datos.",
+                            "Crear base de datos",
+                            MessageBoxButtons.OK,
                             MessageBoxIcon.Information)
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, _
-                            "Crear base de datos", _
-                            MessageBoxButtons.OK, _
+            MessageBox.Show(ex.Message,
+                            "Crear base de datos",
+                            MessageBoxButtons.OK,
                             MessageBoxIcon.Error)
         Finally
             ' Quitamos las referencias a las instancias de los objetos creados.
@@ -43,16 +68,20 @@ Public Class Form1
     End Sub
 
     Private Sub BtnCrearTabla_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCrearTabla.Click
-        'Se crea conexion y catalogo(la verdad no estoy seguro de que sirve) y la tabla nueva
-
+        'Se crea conexion y catalogo..... y la tabla nueva
+        Dim direccion As String = ""
+        Dim oCarpetas As New OpenFileDialog
+        oCarpetas.ShowDialog()
+        direccion = oCarpetas.FileName
+        MessageBox.Show(direccion)
         Dim tabla1 As ADOX.Table
 
         Cn = New ADODB.Connection
-        '  cat = New ADOX.Catalog
+        ' Creamos la tabla
         tabla1 = New ADOX.Table
 
         'Se abre la conexion
-        Cn.Open("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\vbnet\BBDD\Nuevo.accdb")
+        Cn.Open("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\vbnet\BBDD\Nuevo.accdb") ' "Ruta basicamente el codigo de tere"
         cat.ActiveConnection = Cn
         tabla1.Name = "Datos"
 
