@@ -1,0 +1,115 @@
+﻿<Window x:Class="AccDatos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AccDatos"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/incendio_bosque.jpg"/>
+        </Grid.Background>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel x:Name="sp_FormRegistro" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    Visibility="Collapsed" Grid.Row="1" Grid.Column="1">
+            <TextBlock Text="Nombre:" Style="{StaticResource Caja2}"/>
+            <TextBox x:Name="tb_nombre" Style="{StaticResource Escribir}"/>
+            <TextBlock Text="Apellido:" Style="{StaticResource Caja2}"/>
+            <TextBox x:Name="tb_apellido" Style="{StaticResource Escribir}"/>
+            <TextBlock Text="Mail:" Style="{StaticResource Caja2}"/>
+            <TextBox x:Name="tb_mail" Style="{StaticResource Escribir}"/>
+            <TextBlock Text="Usuario:" Style="{StaticResource Caja2}"/>
+            <TextBox x:Name="tb_usuarioEmpleado" Style="{StaticResource Escribir}"/>
+            <TextBlock Text="Passwd:" Style="{StaticResource Caja2}"/>
+            <PasswordBox x:Name="tb_pass" Style="{StaticResource Contraseña}"/>
+            <TextBlock Text="Confirmar Passwd:" Style="{StaticResource Caja2}"/>
+            <PasswordBox x:Name="tb_passConfirm" Style="{StaticResource Contraseña}"/>
+            <Button Content="Alta Jugador" Click="Button_Click_Alta" Style="{StaticResource Botones}"/>
+        </StackPanel>
+     
+        <StackPanel x:Name="sp_LOGIN" Grid.Row="1" Grid.Column="1" Visibility="Visible">
+            <StackPanel Margin="0,60,0,0" Height="100" Width="300" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Usuario:" Style="{StaticResource Caja}"/>
+                <TextBox x:Name="tb_usuario" Style="{StaticResource Escribir2}"/>
+            </StackPanel>
+            <StackPanel Height="100" Width="300" Orientation="Horizontal">
+                <TextBlock Text="Password:" Style="{StaticResource Caja}"/>
+                <PasswordBox x:Name="pb_pass" Style="{StaticResource Contraseña2}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,60,0,0">
+                <Button x:Name="bt_login" Content="Log In" Style="{StaticResource Botones}" Click="bt_login_Click"/>
+                <!-- MouseEnter -->
+                <Button x:Name="bt_registro" Content="Registrar" Style="{StaticResource Botones}" Click="bt_registro_Click"/>
+                <Button x:Name="bt_usuarioAnonimo" Content="Invitado" Style="{StaticResource Botones}" Click="bt_usuarioAnonimo_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel x:Name="sp_PreparacionSimulacion" Visibility="Collapsed" Grid.Row="1" Grid.Column="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <StackPanel HorizontalAlignment="Center">
+                    <TextBlock Text="Filas:" Style="{StaticResource Caja3}"/>
+                    <TextBox x:Name="tb_filas" Style="{StaticResource Escribir}"/>
+                    <TextBlock Text="Columnas:" Style="{StaticResource Caja3}"/>
+                    <TextBox x:Name="tb_columnas" Style="{StaticResource Escribir}"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Width="80">
+                    <TextBlock Text="P:" Style="{StaticResource Caja3}"/>
+                    <TextBox x:Name="tb_P" Style="{StaticResource Escribir}"/>
+                    <TextBlock Text="Q:" Style="{StaticResource Caja3}"/>
+                    <TextBox x:Name="tb_Q" Style="{StaticResource Escribir}"/>
+                </StackPanel>
+            </StackPanel>
+            <Button Content="Iniciar Tablero" HorizontalAlignment="Center" Click="bt_iniciarTablero_Click" Style="{StaticResource Botones}"/>
+            <Button Content="Avanzar 1" HorizontalAlignment="Center" Click="Avanzar1_Click" Style="{StaticResource Botones}"/>
+        </StackPanel>
+
+        <StackPanel x:Name="sp_Tablero" Grid.Row="1" Grid.Column="1" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Row="0" Grid.Column="0" Source="./img/fertil.png"/>
+                <Image Grid.Row="0" Grid.Column="1" Source="./img/fertil.png"/>
+                <Image Grid.Row="1" Grid.Column="0" Source="./img/fertil.png"/>
+                <Image Grid.Row="1" Grid.Column="1" Source="./img/fertil.png"/>
+            </Grid>
+ 
+        </StackPanel>
+    </Grid>
+    <!--<Window.Triggers>
+        <EventTrigger RoutedEvent="MouseLeave">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="bt_login"
+                                    Storyboard.TargetProperty="Width"
+                                    From="80"
+                                    To="200"
+                                    Duration="0:0:2"                                                            
+                                    AutoReverse="True" 
+                                    RepeatBehavior="Forever"/>
+                     --><!--Esto la realiza siempre aunque no este dentro del StackPanel..... />--><!--
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>-->
+
+</Window>
+<!--En la 1º Animacion al salir y entrar a la ventana me reinicia la animacion -->
+<!--  AUTO REVERSE Me lo pilla como StackPanel la animacion -->

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "aWGD8oSzCyclJGVSRvvE+yxJzuAueZjT28A4z4Bk/xZwCXyFNMsTW59yM9blJ5bQ4Kx69Bk+i3M4Vm/ytnsSsg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sergi\\source\\ProyectoDI_AD-master\\ProyectoDI_AD\\AccDatos\\AccDatos.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sergi\\.nuget\\packages\\mysqlconnector\\2.2.5\\mysqlconnector.2.2.5.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\sergi\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
