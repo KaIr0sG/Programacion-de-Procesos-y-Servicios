@@ -33,7 +33,7 @@ namespace AccDatos
 
             OcultarTodo();
             MostrarLogIn();
-
+           // Animacion(bt_usuarioAnonimo); // Si lo pongo aqui se hace siempre
         }
         //Aqui ocultamos todo 
         void OcultarTodo()
@@ -110,10 +110,13 @@ namespace AccDatos
         // Inicio de invitado
         private void bt_usuarioAnonimo_Click(object sender, RoutedEventArgs e)
         {
-            OcultarTodo();
-            MostrarPreparacionSimulacion();
+            //OcultarTodo();
+            //MostrarPreparacionSimulacion();
+            Animacion3(sp_LOGIN);
+            Aparecer_Simulacion(sp_PreparacionSimulacion);
+            sp_PreparacionSimulacion.Visibility = Visibility.Visible;
         }
-       // Al iniciar el tablero nos dara el tablero que indicamos 
+        // Al iniciar el tablero nos dara el tablero que indicamos 
         private void bt_iniciarTablero_Click(object sender, RoutedEventArgs e)
         {
             manager.CargarDatosNuevaSimulacion(int.Parse(tb_filas.Text),
@@ -149,36 +152,91 @@ namespace AccDatos
             sp_FormRegistro.Visibility = Visibility.Visible;
             sp_LOGIN.Visibility = Visibility.Collapsed;
         }
-
-        public static class AnimationHelper
+        private void Resolucion_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            private static void AnimateWidth(DependencyObject target, double from, double to)
+            var selectedItem = (ComboBoxItem)Resolucion.SelectedItem;
+            var resolution = selectedItem.Content.ToString().Split('x');
+            var width = int.Parse(resolution[0]);
+            var height = int.Parse(resolution[1]);
+
+            this.Height = height;
+            this.Width = width;
+        }
+        private void Animacion(Button target)
+        {
+        //    // object target = null;
+        //    // Si no hay ningun target
+        //    if (target == null)
+        //    {
+        //    }
+        //    else
+        //    {
+        //       /* Creamos una animacion*/
+        //        var animacion = new DoubleAnimation();
+        //        animacion.From = 1.0;
+        //        animacion.To = 0.0;
+        //        animacion.Duration = new Duration(TimeSpan.FromSeconds(5));
+        //       /* Creamos la Storyboard, donde va a ir la animacion*/
+        //        Storyboard myStoryboard = new Storyboard();
+        //        myStoryboard.Children.Add(animacion);
+        ///*        Asignamos quien va a hacer la animacion*/
+        //        Storyboard.SetTargetName(animacion, target.Name);
+        //        /*Ponemos que propiedad se va a animar*/
+        //        Storyboard.SetTargetProperty(animacion, new PropertyPath(Button.OpacityProperty));
+        //        /*Empieza la animacion*/
+        //        myStoryboard.Begin(this); // No lo hace cuando estoy encima, lo hace al ejecutarse
+        //    }
+        }
+        private void Aparecer_Simulacion(StackPanel target)
+        {
+            // object target = null;
+            // Si no hay ningun target
+            if (target == null)
             {
-                var WidthAnimation = new DoubleAnimation
-                {
-                    From = 80,
-                    To = 120,
-                    Duration = TimeSpan.FromSeconds(2)
-                };
-
-                Storyboard.SetTarget(WidthAnimation, target);
-                Storyboard.SetTargetProperty(WidthAnimation, new PropertyPath("Width"));
-               
-
-                var storyboard = new Storyboard();
-                storyboard.Children.Add(WidthAnimation);
-                storyboard.Begin();
             }
-
-            /// <summary>
-            /// Fades in the given dependency object.
-            /// </summary>
-            /// <param name="target">The target dependency object to fade in.</param>
-            public static void FadeIn(DependencyObject target)
+            else
             {
-                AnimateWidth(target, 0, 1);
+                //Creamos una animacion
+                var Aparecer_Simulacion = new DoubleAnimation();
+                Aparecer_Simulacion.From = 0.0;
+                Aparecer_Simulacion.To = 1.0;
+                Aparecer_Simulacion.Duration = new Duration(TimeSpan.FromSeconds(5));
+                // Creamos la Storyboard, donde va a ir la animacion
+                Storyboard myStoryboard = new Storyboard();
+                myStoryboard.Children.Add(Aparecer_Simulacion);
+                // Asignamos quien va a hacer la animacion
+                Storyboard.SetTargetName(Aparecer_Simulacion, target.Name);
+                // Ponemos que propiedad se va a animar
+                Storyboard.SetTargetProperty(Aparecer_Simulacion, new PropertyPath(StackPanel.OpacityProperty));
+                // Empieza la animacion
+                myStoryboard.Begin(this); // No lo hace cuando estoy encima, lo hace al ejecutarse
+            }
+        }
+        private void Animacion3(StackPanel target)
+        {
+            // object target = null;
+            // Si no hay ningun target
+            if (target == null)
+            {
+            }
+            else
+            {
+                //Creamos una animacion
+                var animacion = new DoubleAnimation();
+                animacion.From = 1.0;
+                animacion.To = 0.0;
+                animacion.Duration = new Duration(TimeSpan.FromSeconds(5));
+                // Creamos la Storyboard, donde va a ir la animacion
+                Storyboard myStoryboard = new Storyboard();
+                myStoryboard.Children.Add(animacion);
+                // Asignamos quien va a hacer la animacion
+                Storyboard.SetTargetName(animacion, target.Name);
+                // Ponemos que propiedad se va a animar
+                Storyboard.SetTargetProperty(animacion, new PropertyPath(StackPanel.OpacityProperty));
+                // Empieza la animacion
+                myStoryboard.Begin(this); // No lo hace cuando estoy encima, lo hace al ejecutarse
             }
         }
 
     }
-    }
+}

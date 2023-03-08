@@ -15,6 +15,8 @@ namespace AccDatos
         //Campos privados
         private int _filas;
         private int _columnas;
+        private int _altura;
+        private int _ancho;
         private double _p; //probabilidad nacimiento arbol en tierra fertil
         private double _q; //probabilidad combustion espontanea de arbol
 
@@ -27,6 +29,30 @@ namespace AccDatos
         //"w" Agua/rio
 
         //Propiedades publicas
+        public int altura
+        {
+            get
+            {
+                return _altura;
+            }
+            set
+            {
+                _altura = value;
+            }
+        }
+
+        public int ancho
+        {
+            get
+            {
+                return _ancho;
+            }
+            set
+            {
+                _ancho = value;
+            }
+        }
+
         public double P
         {
             get

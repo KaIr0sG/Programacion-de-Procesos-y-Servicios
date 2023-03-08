@@ -10,7 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/incendio_bosque.jpg"/>
         </Grid.Background>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="3*"/>
@@ -38,7 +38,7 @@
             <PasswordBox x:Name="tb_passConfirm" Style="{StaticResource Contraseña}"/>
             <Button Content="Alta Jugador" Click="Button_Click_Alta" Style="{StaticResource Botones}"/>
         </StackPanel>
-     
+
         <StackPanel x:Name="sp_LOGIN" Grid.Row="1" Grid.Column="1" Visibility="Visible">
             <StackPanel Margin="0,60,0,0" Height="100" Width="300" Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Text="Usuario:" Style="{StaticResource Caja}"/>
@@ -48,12 +48,20 @@
                 <TextBlock Text="Password:" Style="{StaticResource Caja}"/>
                 <PasswordBox x:Name="pb_pass" Style="{StaticResource Contraseña2}"/>
             </StackPanel>
+
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,60,0,0">
                 <Button x:Name="bt_login" Content="Log In" Style="{StaticResource Botones}" Click="bt_login_Click"/>
-                <!-- MouseEnter -->
                 <Button x:Name="bt_registro" Content="Registrar" Style="{StaticResource Botones}" Click="bt_registro_Click"/>
                 <Button x:Name="bt_usuarioAnonimo" Content="Invitado" Style="{StaticResource Botones}" Click="bt_usuarioAnonimo_Click"/>
+
             </StackPanel>
+            <ComboBox x:Name="Resolucion" Margin="20" MinWidth="40" MaxWidth="240" Width="260" Height="60" FontSize="24" 
+          SelectedIndex="0"
+          SelectionChanged="Resolucion_SelectionChanged">
+                <ComboBoxItem Content="1920x1080"/>
+                <ComboBoxItem Content="1280x720"/>
+                <ComboBoxItem Content="800x600"/>
+            </ComboBox>
         </StackPanel>
 
         <StackPanel x:Name="sp_PreparacionSimulacion" Visibility="Collapsed" Grid.Row="1" Grid.Column="1">
@@ -90,26 +98,6 @@
                 <Image Grid.Row="1" Grid.Column="0" Source="./img/fertil.png"/>
                 <Image Grid.Row="1" Grid.Column="1" Source="./img/fertil.png"/>
             </Grid>
- 
         </StackPanel>
     </Grid>
-    <!--<Window.Triggers>
-        <EventTrigger RoutedEvent="MouseLeave">
-            <BeginStoryboard>
-                <Storyboard>
-                    <DoubleAnimation Storyboard.TargetName="bt_login"
-                                    Storyboard.TargetProperty="Width"
-                                    From="80"
-                                    To="200"
-                                    Duration="0:0:2"                                                            
-                                    AutoReverse="True" 
-                                    RepeatBehavior="Forever"/>
-                     --><!--Esto la realiza siempre aunque no este dentro del StackPanel..... />--><!--
-                </Storyboard>
-            </BeginStoryboard>
-        </EventTrigger>
-    </Window.Triggers>-->
-
 </Window>
-<!--En la 1º Animacion al salir y entrar a la ventana me reinicia la animacion -->
-<!--  AUTO REVERSE Me lo pilla como StackPanel la animacion -->

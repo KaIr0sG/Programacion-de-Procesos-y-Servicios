@@ -7,18 +7,9 @@
         <Setter Property="Margin" Value="7"/>
         <Setter Property="Padding" Value="1"/>
         <Setter Property="Background" Value="Transparent"/>
+        <!--Property="Opacity"-->
         <Setter Property="Foreground" Value="white"/>
-
-        <!--<Style x:Key="Botones" TargetType="Button">
-            <Setter Property="FontSize" Value="30"/>
-            <Setter Property="FontFamily" Value="Bernard MT Condensed"/>
-            <Setter Property="Margin" Value="7"/>
-            <Setter Property="Padding" Value="1"/>
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Foreground" Value="white"/>-->
-
-
-        </Style>
+    </Style>
     <Style x:Key="Caja" TargetType="TextBlock">
         <Setter Property="FontSize" Value="30"/>
         <Setter Property="FontFamily" Value="Bernard MT Condensed"/>

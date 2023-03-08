@@ -74,7 +74,10 @@ namespace AccDatos
                 CerrarConexion();
                 return null;
             }
-        }   
+
+        }
+
+        
 
         public void SP_UpdateActor(int id_actor, string nuevoApellido)
         {
@@ -230,7 +233,6 @@ namespace AccDatos
                 return -98;
             }
         }
-
 
     }
 }
